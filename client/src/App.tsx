@@ -1,8 +1,7 @@
-import React from "react";
 // eslint-disable-next-line
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-import Post from "./components/Posts/Posts";
-import Form from "./components/Form/Form";
+// import Post from "./components/Posts/Posts";
+// import Form from "./components/Form/Form";
 
 import memories from "./images/memories.png";
 
@@ -24,10 +23,10 @@ const App: React.FC = () => {
             spacing={4}
           >
             <Grid item xs={12} sm={7}>
-              <Post />
+              {/* <Post /> */}
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Form />
+              {/* <Form /> */}
             </Grid>
           </Grid>
         </Container>

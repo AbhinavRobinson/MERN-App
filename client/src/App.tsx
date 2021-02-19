@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-// import Post from "./components/Posts/Posts";
-// import Form from "./components/Form/Form";
+import Post from "./components/Posts/Posts";
+import Form from "./components/Form/Form";
 
 import memories from "./images/memories.png";
 
@@ -10,9 +10,9 @@ const App: React.FC = () => {
     <Container maxWidth="lg">
       <AppBar position="static" color="inherit">
         <Typography variant="h2" align="center">
+          <img src={memories} alt="memories" height="60" width="60" />
           Nostalgic
         </Typography>
-        <img src={memories} alt="memories" height="60" width="60" />
       </AppBar>
       <Grow in>
         <Container>
@@ -23,10 +23,10 @@ const App: React.FC = () => {
             spacing={4}
           >
             <Grid item xs={12} sm={7}>
-              {/* <Post /> */}
+              <Post />
             </Grid>
             <Grid item xs={12} sm={4}>
-              {/* <Form /> */}
+              <Form />
             </Grid>
           </Grid>
         </Container>

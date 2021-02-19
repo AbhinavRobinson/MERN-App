@@ -2,8 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "./dist/index.js",
   "scripts": {
     "start": "nodemon ./dist/index.js",
     "compile": "tsc -w -p .",

@@ -10,7 +10,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // mongoose setup
-fs.readFile("secret.json", "utf8", (err, data) => {
+fs.readFile(__dirname + "/../secret.json", "utf8", (err, data) => {
   if (err) console.log(err);
   else {
     const secrets = JSON.parse(data);

@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "nodemon ./dist/index.js",
+    "start": "nodemon ./dist/src/index.js",
     "compile": "tsc -w -p .",
     "dev": "concurrently --raw \"yarn start\" \"yarn compile\""
   },

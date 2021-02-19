@@ -3,14 +3,18 @@ import mongoose from "mongoose";
 import cors from "cors";
 import fs from "fs";
 
+import postRoutes from "../routes/posts";
+
 const app = express();
+
+app.use("/posts", postRoutes);
 
 app.use(express.json({ limit: "30mb" }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // mongoose setup
-fs.readFile(__dirname + "/../secret.json", "utf8", (err, data) => {
+fs.readFile(__dirname + "/../../secret.json", "utf8", (err, data) => {
   if (err) console.log(err);
   else {
     const secrets = JSON.parse(data);

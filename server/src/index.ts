@@ -1,17 +1,16 @@
 import express from "express";
-import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import fs from "fs";
 
 const app = express();
 
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(express.json({ limit: "30mb" }));
+app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // mongoose setup
-fs.readFile("./secret.json", "utf8", (err, data) => {
+fs.readFile("secret.json", "utf8", (err, data) => {
   if (err) console.log(err);
   else {
     const secrets = JSON.parse(data);
